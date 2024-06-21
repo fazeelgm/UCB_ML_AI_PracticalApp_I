@@ -25,7 +25,7 @@ The _**objective** is to see if a person would accept a coupon offered to them o
 >
 >**Data**
 >
->This data comes to us from the UCI Machine Learning repository and was collected via a survey on Amazon Mechanical Turk. The survey describes different driving scenarios including the destination, current time, weather, passenger, etc., and then ask the person whether he will accept the coupon if he is the driver. Answers that the user will drive there ‘right away’ or ‘later before the coupon expires’ are labeled as ‘Y = 1’ and answers ‘no, I do not want the coupon’ are labeled as ‘Y = 0’.  There are five different types of coupons -- less expensive restaurants (under \\$20), coffee houses, carry out & take away, bar, and more expensive restaurants (\\$20 - \\$50).
+>This data comes to us from the UCI Machine Learning repository and was collected via a survey on Amazon Mechanical Turk. The survey describes different driving scenarios including the destination, current time, weather, passenger, etc., and then ask the person whether he will accept the coupon if he is the driver. Answers that the user will drive there ‘right away’ or ‘later before the coupon expires’ are labeled as ‘Y = 1’ and answers ‘no, I do not want the coupon’ are labeled as ‘Y = 0’.  There are five different types of coupons -- less expensive restaurants (under $20), coffee houses, carry out & take away, bar, and more expensive restaurants ($20 - $50).
 >
 >The attributes of this data set include:
 >1. User attributes
@@ -103,7 +103,50 @@ Comparing the results, we can draw the following conclusions about those who acc
 * For _regular_+ bar-goers (visits > 3) they would accept the coupon, but we were likely not changing their behavior
 * For _occasional_ bar-goers (visits > 1), they would accept the coupon at higher rates if there was no impediment to their ability to go to the bar (kids, early  wake up, etc.), so we were likely influencing their normal bar-going behavior
 
-**This shows that bar-goers are a good target audience for our program.**
+_**This shows that bar-goers are a good target audience for our program.**_
 
-## Investigation: Acceptance of Bar coupons
+## Independent Investigations
 
+We were then asked to use the Bar coupon example to further explore one of the other coupon groups and try to determine the characteristics of passengers who accept the coupons. I used a feature correlation matrix to see if there were any easy "pickings" but nothing obvious jumped out. 
+
+My overall strategy now was to:
+
+* Find a segment where likelihood of coupon acceptance is high
+* Then work with Sales, Marketing and Partnership Teams to build revenue-share streams
+
+### Investigating Destination / Direction of Travel
+
+Based on the findings from the last investigation, it seems that the most likelihood of the user accepting the coupon is based on their ability to redeem it immediately. 
+
+**Hypothesis: _Could it be that redemption rate is impacted by the destination and direction of travel for different coupon types?_**
+
+<img src="https://github.com/fazeelgm/PracticalApplication-5-1/blob/main/images/directionality.png" border="10"/>
+
+### Investigating Time of Day
+
+Based on the redemption sensitivity to direction and destination on coupons, I decided to look at the time of day the coupon is accepted. 
+
+**Hypothesis: _Does the Time of Day have an effect on redeeming the coupons?_**
+
+<img src="https://github.com/fazeelgm/PracticalApplication-5-1/blob/main/images/time_of_day.png" border="10"/>
+
+## Actionable Learnings & Recommendations
+
+**Patterns to exploit**
+* Partnerships: Carry out and Restaurants<20) had the highest acceptance rates with notable increase when the venue is along the way to the destination. We should look for additonal rev-share partners in these two high converting categories
+* Revenue: Coffee House: When driving to work, redemption rates ~35% higher if venue is along the way
+* No Urgent Place conversion is generally higher in all categories and we should drill-down on this usage pattern to learn more about coupon placement
+* Partnerships / Revenue: Meal-time (breakfast/lunch/dinner) redemption is relatively high, so these types of partnerships should be prioirittized since the customer is already on the road and likely to convert, so we have a stronger negotiating hand in partnership terms
+
+**Missed opportunities**
+*  Bar coupons accepted about 50% when heading home and offered in direction of travel, but other rates are lower. This type of coupon shows senstivity to destination and time of day based on the effects of alchohol, and should support more conversion scenarios if these factors are taken into account. We also note the unexpected redemption of Bar coupons (62%) in the 10am time slot could be an indication that we are changing typical usage patterns and there may be other time-sensitive coupons offering scenarios (e.g. shift-end visit to Bars in the morning) that can result in higher acceptance!
+
+**Overal Product Recommendations**
+* Coupons along the direction of travel should be surfaced at a higher priority/frequency than those in the opposite direction
+
+Checkout the ```prompt.ipynb notebook``` for all the details!!!
+
+## Resources
+
+* ```data/coupons.csv```: Yiou can download this file to play with the data yourself
+* ```propmt.ipynb```: More details and supporting code is in this notebook
