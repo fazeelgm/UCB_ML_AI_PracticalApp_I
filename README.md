@@ -26,14 +26,15 @@ You can download the ```data/coupons.csv``` file to play with it yourself and th
 
 ## Investigation: Overall Acceptance Behavior**
 
-Overall redemption and acceptance by ```Coupon Type``` was found to be:
+Overall redemption rates and acceptance by ```Coupon Type``` were found to be:
 
-<table>
+<table style="width:100%">
 <tr>
-<td width="33%"">
-![Overall Coupon Acceptance Rate: 56.84%](https://github.com/fazeelgm/PracticalApplication-5-1/blob/main/images/pie-acceptance-overall-bar.png "Title text")</td>
+<td width="33%">
+  <img src="https://github.com/fazeelgm/PracticalApplication-5-1/blob/main/images/pie-acceptance-overall-bar.png" border="10"/>
+</td>
 <td width="67%">
-The quick brown fox jumps over the lazy dog.
+  <img src="https://github.com/fazeelgm/PracticalApplication-5-1/blob/main/images/bar-coupons.png" border="10"/>
 </td>
 </tr>
 </table>
