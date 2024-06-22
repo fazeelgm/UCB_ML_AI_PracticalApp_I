@@ -122,6 +122,26 @@ Based on the findings from the last investigation, it seems that the most likeli
 
 <img src="https://github.com/fazeelgm/PracticalApplication-5-1/blob/main/images/directionality.png" border="10"/>
 
+**Observations when comparing home versus work as a destination**
+
+* Carry out & Take away - redemption very high (62-82%), other coupon types not so much
+* Picking up dinner/lunch on way to home? Possibly change user behavior?
+* Same for cheaper restaurants? Expensive?
+
+**Observations when comparing the directionality towards or away from the coupon redemption site**
+
+* Coffee House - redemption higher when location is on the way to work (57% vs 33%)
+* Carry out & Take away - overall redemption high as noted above but higher when location is on the way home (82% vs 75)
+* Restaurant(<20) - redemption is higher when location is on the way home (61% vs 36%)
+
+**Observations when the destination is 'No Urgent Place'**
+
+* Interestingly, 'No Urgent Place' contributes to about half the destinations, so we definitely to look at it
+* _Direction of travel is always opposite to the destination for this category, so I'm guessing that directionality data was not captured for this category_
+* Overall, the redemption rates across coupon types are higher than what we observe in the Home and Work destinations, with the exception of the Restaurant(<20) and Carry Out categories which are higher. This stands to reason because there is no _urgency_ or time-constraint and allows the user to readily accept them
+
+See the [Learnings & Recommendations](https://github.com/fazeelgm/PracticalApplication-5-1/edit/main/README.md#investigating-time-of-day) section below for conclusions based on these observations.
+
 ### Investigating Time of Day
 
 Based on the redemption sensitivity to direction and destination on coupons, I decided to look at the time of day the coupon is accepted. 
