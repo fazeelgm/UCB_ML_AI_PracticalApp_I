@@ -140,7 +140,7 @@ Based on the findings from the last investigation, it seems that the most likeli
 * _Direction of travel is always opposite to the destination for this category, so I'm guessing that directionality data was not captured for this category_
 * Overall, the redemption rates across coupon types are higher than what we observe in the Home and Work destinations, with the exception of the Restaurant(<20) and Carry Out categories which are higher. This stands to reason because there is no _urgency_ or time-constraint and allows the user to readily accept them
 
-See the [Learnings & Recommendations](https://github.com/fazeelgm/PracticalApplication-5-1/edit/main/README.md#investigating-time-of-day) section below for conclusions based on these observations.
+See the [Learnings & Recommendations](https://github.com/fazeelgm/PracticalApplication-5-1#actionable-learnings--recommendations) section below for conclusions based on these observations.
 
 ### Investigating Time of Day
 
